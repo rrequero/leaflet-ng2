@@ -32,6 +32,14 @@ const ANIMATION_DELAY: number = 50; // delay to wait for UI Changes...
     selector: 'yaga-map',
     template: `<span style="display: none"><ng-content></ng-content></span>`
 })
+
+/**
+* Map root component
+* @extends L.Map
+* @class MapComponent
+* @classdesc Yaga Map-Component "yaga-map"
+* @param {@angular/core.ElementRef} Element DOM root as ElementRef (@Injected)
+*/
 export class MapComponent extends Map implements AfterViewInit {
     @Output() public zoomChange: EventEmitter<number> = new EventEmitter();
     @Output() public latChange: EventEmitter<number> = new EventEmitter();
@@ -233,6 +241,11 @@ export class MapComponent extends Map implements AfterViewInit {
     // already handled with moveend
     // setView(center: LatLngExpression, zoom: number, options?: ZoomPanOptions): this {
 
+
+    /**
+     * Current zoom level (2-Way)
+     * @member {number} MapComponent.zoom
+     */
     @Input() set zoom(val: number) {
         this.setZoom(val);
     }
@@ -240,6 +253,10 @@ export class MapComponent extends Map implements AfterViewInit {
         return this.getZoom();
     }
 
+    /**
+     * Current latitude (2-Way)
+     * @member {number} MapComponent.lat
+     */
     @Input() set lat(val: number) {
         const coords: LatLng = new LatLng(val, this.getCenter().lng);
         this.setView(coords, this.zoom);
@@ -248,6 +265,10 @@ export class MapComponent extends Map implements AfterViewInit {
         return this.getCenter().lat;
     }
 
+    /**
+     * Current longitude (2-Way)
+     * @member {number} MapComponent.lng
+     */
     @Input() set lng(val: number) {
         const coords: LatLng =  new LatLng(this.getCenter().lat, val);
         this.setView(coords, this.zoom);

@@ -1,0 +1,37 @@
+{
+	"tags":
+	{
+		"allowUnknownTags" : true
+	},
+	"plugins":[
+		 "plugins/markdown"
+		,"/Users/atd/Documents/Projekte/github/leaflet-ng2/node_modules/tsdoc/template/plugins/TSDoc.js"
+	],
+	"opts":
+	{
+		"template"	:"/Users/atd/Documents/Projekte/github/leaflet-ng2/node_modules/tsdoc/template",
+		"recurse"	:"true"
+	},
+	"templates" : {
+		"cleverLinks"     : false,
+		"monospaceLinks"  : false
+	},
+	"source":
+	{
+		"includePattern": "(\\.d)?\\.ts$"
+	},
+	"markdown"  : {
+		"parser"   : "gfm",
+		"hardwrap" : true
+	},
+	"tsdoc":{
+		"source"		:"ts/",
+		"destination"	:"docs",
+		"tutorials"		:"",
+		"systemName"	: "leaflet-ng2",
+		"footer"		: "",
+		"copyright"		: "leaflet-ng2 Copyright © 2016 Yaga Team.",
+		"outputSourceFiles" : true,
+		"commentsOnly": true
+	}
+}

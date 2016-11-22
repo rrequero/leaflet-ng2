@@ -48,6 +48,7 @@
     "reflect-metadata": "^0.1.8",
     "rxjs": "^5.0.0-rc.2",
     "ts-npm-lint": "^0.1.0",
+    "tsdoc": "0.0.4",
     "tslint": "^3.15.1",
     "typescript": "^2.0.7",
     "typings": "^1.5.0",
