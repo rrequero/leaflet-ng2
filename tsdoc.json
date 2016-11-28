@@ -5,11 +5,11 @@
 	},
 	"plugins":[
 		 "plugins/markdown"
-		,"/Users/atd/Documents/Projekte/github/leaflet-ng2/node_modules/tsdoc/template/plugins/TSDoc.js"
+		,"node_modules/tsdoc/template/plugins/TSDoc.js"
 	],
 	"opts":
 	{
-		"template"	:"/Users/atd/Documents/Projekte/github/leaflet-ng2/node_modules/tsdoc/template",
+		"template"	:"node_modules/tsdoc/template",
 		"recurse"	:"true"
 	},
 	"templates" : {
