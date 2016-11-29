@@ -28,11 +28,6 @@ import {
 
 const ANIMATION_DELAY: number = 50; // delay to wait for UI Changes...
 
-@Component({
-    selector: 'yaga-map',
-    template: `<span style="display: none"><ng-content></ng-content></span>`
-})
-
 /**
  * @classdesc [Leaflet Map](http://leafletjs.com/reference-1.0.2.html#map)
  * @class L.Map
@@ -46,6 +41,10 @@ const ANIMATION_DELAY: number = 50; // delay to wait for UI Changes...
  * @classdesc Yaga Map-Component `<yaga-map>`
  * @param {"@angular/core".ElementRef} dom - Element DOM root as ElementRef (@Injected)
  */
+@Component({
+    selector: 'yaga-map',
+    template: `<span style="display: none"><ng-content></ng-content></span>`
+})
 export class MapComponent extends Map implements AfterViewInit {
     /**
      * Emitter for change on property zoom `[(zoom)]`
