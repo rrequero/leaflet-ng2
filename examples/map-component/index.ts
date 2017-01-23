@@ -152,7 +152,7 @@ const template: string = `
 `;
 /* tslint:enable */
 
-interface ITileLayerOptions {
+export interface ITileLayerOptions {
     url: string;
     opacity?: number;
 }
