@@ -1,0 +1,43 @@
+/// <reference types="leaflet" />
+import { EventEmitter, AfterViewInit, OnDestroy } from '@angular/core';
+import { Marker, Event, DragEndEvent, LatLng, LatLngLiteral, LatLngTuple, Icon } from 'leaflet';
+import { MapComponent } from './map.component';
+import { PopupDirective } from './popup.directive';
+import { TooltipDirective } from './tooltip.directive';
+import { IconDirective } from './icon.directive';
+export declare class MarkerDirective extends Marker implements AfterViewInit, OnDestroy {
+    positionChange: EventEmitter<LatLng>;
+    latChange: EventEmitter<number>;
+    lngChange: EventEmitter<number>;
+    opacityChange: EventEmitter<number>;
+    displayChange: EventEmitter<boolean>;
+    zindexChange: EventEmitter<number>;
+    draggableChange: EventEmitter<boolean>;
+    iconChange: EventEmitter<Icon>;
+    tooltipOpenedChange: EventEmitter<boolean>;
+    popupOpenedChange: EventEmitter<boolean>;
+    dragendEvent: EventEmitter<DragEndEvent>;
+    dragstartEvent: EventEmitter<Event>;
+    movestartEvent: EventEmitter<Event>;
+    dragEvent: EventEmitter<Event>;
+    moveendEvent: EventEmitter<Event>;
+    popupDirective: PopupDirective;
+    tooltipDirective: TooltipDirective;
+    iconDirective: IconDirective;
+    private initialized;
+    constructor(mapComponent: MapComponent);
+    ngAfterViewInit(): void;
+    ngOnDestroy(): void;
+    display: boolean;
+    setLatLng(val: LatLng | LatLngLiteral | LatLngTuple): this;
+    position: LatLng;
+    lat: number;
+    lng: number;
+    setOpacity(val: number): this;
+    opacity: number;
+    setIcon(val: Icon): this;
+    icon: Icon;
+    draggable: boolean;
+    title: string;
+    alt: string;
+}
