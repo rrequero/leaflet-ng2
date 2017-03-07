@@ -10,7 +10,6 @@
     "reinit": "npm run clean; npm run init",
     "transpile": "tsc",
     "lint": "tslint ts/**",
-    "postinstall": "tsc",
     "npm-lint": "ts-npm-lint --fix-typings && ts-npm-lint",
     "test": "npm run lint && npm run transpile && istanbul cover _mocha -- -- test/*.js",
     "dist": "npm test && npm run npm-lint",
